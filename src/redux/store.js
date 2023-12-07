@@ -10,7 +10,7 @@ import {
   REGISTER,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import { catalogReducer } from './catalog/catalogSlice';
+import { catalogReducer } from './catalog/CatalogSlice';
 
 // import { filterReducer } from './filter/filterSlice';
 
