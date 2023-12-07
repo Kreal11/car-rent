@@ -11,8 +11,8 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
+// import { filterReducer } from './filter/filterSlice';
 import { catalogReducer } from './catalog/catalogSlice';
-import { filterReducer } from './filter/filterSlice';
 
 const persistConfig = {
   key: 'catalog',
@@ -25,8 +25,8 @@ const persistedReducer = persistReducer(persistConfig, catalogReducer);
 
 export const store = configureStore({
   reducer: {
-    contacts: persistedReducer,
-    filter: filterReducer,
+    catalog: persistedReducer,
+    // filter: filterReducer,
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
