@@ -35,7 +35,12 @@ export const ItemDescrList = styled.ul`
   column-gap: 12px;
   row-gap: 4px;
   flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   margin-bottom: 28px;
+  max-height: 40px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 
   & li {
     color: rgba(18, 20, 23, 0.5);
