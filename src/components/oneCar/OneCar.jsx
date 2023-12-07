@@ -5,52 +5,49 @@ import {
   ItemDescrList,
   ItemHeaderWrapper,
 } from './OneCar.styled';
+import { useModal } from '../../hooks/useModal';
+import { Modal } from '../modal/Modal';
 
-export const OneCar = ({
-  id,
-  year,
-  make,
-  model,
-  type,
-  img,
-  description,
-  fuelConsumption,
-  engineSize,
-  accessories,
-  functionalities,
-  rentalPrice,
-  rentalCompany,
-  address,
-  rentalConditions,
-  mileage,
-}) => {
-  const addressParts = address.split(',');
+export const OneCar = ({ car }) => {
+  const addressParts = car.address.split(',');
   const city = addressParts[1].trim();
   const country = addressParts[2].trim();
 
+  const { isOpen, openModal, closeModal } = useModal();
+
   return (
-    <CatalogItem key={id}>
-      <img src={img} alt="Car" crossOrigin="anonymous" />
+    <CatalogItem key={car.id}>
+      <img src={car.img} alt="Car" crossOrigin="anonymous" />
       <div>
         <ItemHeaderWrapper>
           <div>
             <h2>
-              {make} <span>{model}</span>, {year}
+              {car.make} <span>{car.model}</span>, {car.year}
             </h2>
           </div>
-          <h5>{rentalPrice}</h5>
+          <h5>{car.rentalPrice}</h5>
         </ItemHeaderWrapper>
         <ItemDescrList>
           <li>{city}</li>
           <li>{country}</li>
-          <li>{rentalCompany}</li>
-          <li>{type}</li>
-          <li>{model}</li>
-          <li>{id}</li>
-          <li>{accessories[0]}</li>
+          <li>{car.rentalCompany}</li>
+          <li>{car.type}</li>
+          <li>{car.model}</li>
+          <li>{car.id}</li>
+          <li>{car.accessories[0]}</li>
         </ItemDescrList>
       </div>
-      <ItemButton type="button">Learn more</ItemButton>
+      <ItemButton type="button" onClick={openModal}>
+        Learn more
+      </ItemButton>
+      {isOpen ? (
+        <Modal
+          closeModal={closeModal}
+          car={car}
+          city={city}
+          country={country}
+        />
+      ) : null}
     </CatalogItem>
   );
 };

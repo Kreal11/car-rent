@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const NavLinkWrapper = styled.div`
   font-size: 30px;
+  font-weight: 600;
   display: flex;
   justify-content: center;
   gap: 30px;
@@ -21,7 +22,7 @@ export const NavLinkWrapper = styled.div`
     }
 
     &.active {
-      &:after {
+      &::after {
         content: '';
         display: block;
         position: absolute;
@@ -30,7 +31,7 @@ export const NavLinkWrapper = styled.div`
         transform: translateX(-50%);
         width: 100%;
         height: 3px;
-        border-radius: 5px;
+        border-radius: 3px;
         background-color: #3470ff;
       }
     }

@@ -32,7 +32,7 @@ export const Catalog = () => {
 
       <CatalogList>
         {catalog?.map(car => {
-          return <OneCar key={car.id} {...car} />;
+          return <OneCar key={car.id} car={car} />;
         })}
       </CatalogList>
       {page < 3 && (
