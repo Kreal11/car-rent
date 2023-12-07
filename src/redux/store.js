@@ -10,9 +10,9 @@ import {
   REGISTER,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
+import { catalogReducer } from './catalog/catalogSlice';
 
 // import { filterReducer } from './filter/filterSlice';
-import { catalogReducer } from './catalog/catalogSlice';
 
 const persistConfig = {
   key: 'catalog',
