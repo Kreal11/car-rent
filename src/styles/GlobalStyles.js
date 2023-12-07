@@ -1,17 +1,17 @@
 // styled-components
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 // Manrope font
-import manropeRegular from "../fonts/Manrope-Regular.ttf";
-import manropeMedium from "../fonts/Manrope-Medium.ttf";
-import manropeSemiBold from "../fonts/Manrope-SemiBold.ttf";
+import manropeRegular from '../fonts/Manrope-Regular.ttf';
+import manropeMedium from '../fonts/Manrope-Medium.ttf';
+import manropeSemiBold from '../fonts/Manrope-SemiBold.ttf';
 
 // Montserrat font
-import montserratRegular from "../fonts/Montserrat-Regular.ttf";
-import montserratSemiBold from "../fonts/Montserrat-SemiBold.ttf";
+import montserratRegular from '../fonts/Montserrat-Regular.ttf';
+import montserratSemiBold from '../fonts/Montserrat-SemiBold.ttf';
 
 // Inter font
-import interMedium from "../fonts/Inter-Medium.ttf";
+import interMedium from '../fonts/Inter-Medium.ttf';
 
 export const GlobalStyles = createGlobalStyle`
 @font-face {
@@ -164,7 +164,8 @@ section {
 }
 
 ol,
-ul {
+ul,
+li {
   list-style: none;
   padding: 0;
 }
@@ -186,6 +187,7 @@ table {
 button {
   cursor: pointer;
   padding: 0;
+  border: none;
 }
 .link {
   text-decoration: none;

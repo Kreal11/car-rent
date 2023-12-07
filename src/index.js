@@ -4,18 +4,18 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import { GlobalStyles } from './styles/GlobalStyles';
-import { PersistGate } from 'redux-persist/integration/react';
-import { persistor } from './redux/store';
+import { store } from './redux/store';
+import { Provider } from 'react-redux';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter basename="/test-task-car-rent">
     {/* <React.StrictMode> */}
-    <PersistGate loading={null} persistor={persistor}>
+    <Provider store={store}>
       <App />
       <GlobalStyles />
       <ToastContainer autoClose={1000} theme="colored" />
-    </PersistGate>
+    </Provider>
     {/* </React.StrictMode> */}
   </BrowserRouter>
 );

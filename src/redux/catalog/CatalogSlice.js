@@ -3,6 +3,7 @@ const { fetchCarsThunk, fetchOneCarThunk } = require('./operations');
 
 const initialState = {
   catalog: [],
+  currentId: null,
   isLiked: false,
   isLoading: false,
   error: null,
@@ -11,6 +12,12 @@ const initialState = {
 const catalogSlice = createSlice({
   name: 'catalog',
   initialState,
+
+  reducers: {
+    setCurrentId: (state, { payload }) => {
+      state.currentId = payload;
+    },
+  },
 
   extraReducers: builder => {
     builder
@@ -44,4 +51,5 @@ const catalogSlice = createSlice({
   },
 });
 
+export const { currentId } = catalogSlice.actions;
 export const catalogReducer = catalogSlice.reducer;
