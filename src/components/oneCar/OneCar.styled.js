@@ -7,9 +7,9 @@ export const CatalogItem = styled.li`
   & img {
     width: 401px;
     height: 268px;
-    border-radius: 14px 14px 20px 20px;
+    border-radius: 14px;
     object-fit: cover;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 98%, 0% 98%);
+    /* clip-path: polygon(0% 0%, 100% 0%, 100% 98%, 0% 98%); */
     margin-bottom: 14px;
   }
 `;

@@ -30,13 +30,7 @@ export const OneCar = ({
 
   return (
     <CatalogItem key={id}>
-      <img
-        src={img}
-        alt="Car"
-        width="401"
-        height="268"
-        crossOrigin="anonymous"
-      />
+      <img src={img} alt="Car" crossOrigin="anonymous" />
       <div>
         <ItemHeaderWrapper>
           <div>
