@@ -7,6 +7,7 @@ const initialState = {
   isLiked: false,
   isLoading: false,
   error: null,
+  page: 1,
 };
 
 const catalogSlice = createSlice({
@@ -22,7 +23,7 @@ const catalogSlice = createSlice({
   extraReducers: builder => {
     builder
       .addCase(fetchCarsThunk.fulfilled, (state, { payload }) => {
-        state.catalog = payload;
+        state.catalog = [...state.catalog, ...payload];
         state.isLoading = false;
         state.error = null;
       })
