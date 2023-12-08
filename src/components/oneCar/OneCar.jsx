@@ -69,8 +69,7 @@ export const OneCar = ({ car }) => {
           <li>{car.rentalCompany}</li>
           <li>{car.type}</li>
           <li>{car.model}</li>
-          <li>{car.id}</li>
-          <li>{car.accessories[0]}</li>
+          <li>ID: {car.id}</li>
         </ItemDescrList>
       </div>
       <ItemButton type="button" onClick={openModal}>
