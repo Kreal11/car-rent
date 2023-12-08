@@ -1,6 +1,6 @@
 import React from 'react';
 import { CarWrapper, HomeWrapper, TextWrapper } from './Home.styled';
-import carImage from './Car.png';
+import carImage from './car.png';
 
 export const Home = () => {
   return (
@@ -8,8 +8,6 @@ export const Home = () => {
       <CarWrapper>
         <img src={carImage} alt="" />
       </CarWrapper>
-      {/* <SkidMarks /> */}
-      {/* <Smoke /> */}
       <TextWrapper>Rent a car now!</TextWrapper>
     </HomeWrapper>
   );

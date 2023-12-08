@@ -35,12 +35,12 @@ const fadeIn = keyframes`
 
 export const CarWrapper = styled.div`
   position: absolute;
-  top: 27%;
+  top: 35%;
   left: -100px;
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: auto;
   background-size: contain;
-  animation: ${moveCar} 5s linear forwards;
+  animation: ${moveCar} 7s linear forwards;
 `;
 
 export const TextWrapper = styled.div`
@@ -53,5 +53,5 @@ export const TextWrapper = styled.div`
   font-size: 24px;
   font-weight: bold;
   opacity: 0;
-  animation: ${typeIn} 5s forwards, ${fadeIn} 1s 2.7s forwards;
+  animation: ${typeIn} 5s forwards, ${fadeIn} 1s 3.8s forwards;
 `;
