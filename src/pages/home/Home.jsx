@@ -1,6 +1,6 @@
 import React from 'react';
 import { CarWrapper, HomeWrapper, TextWrapper } from './Home.styled';
-import carImage from './car.png';
+import carImage from './Сar.png';
 
 export const Home = () => {
   return (
