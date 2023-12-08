@@ -9,7 +9,6 @@ const favoritesSlice = createSlice({
   initialState,
   reducers: {
     addToFavorites: (state, { payload }) => {
-      console.log(payload);
       if (!state.favorites.some(favorite => favorite.id === payload.id)) {
         state.favorites?.push(payload);
       }

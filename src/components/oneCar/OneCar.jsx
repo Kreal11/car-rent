@@ -20,8 +20,6 @@ import { SvgSymbols } from '../../images/svg/SvgSymbols';
 export const OneCar = ({ car }) => {
   const favorites = useSelector(selectFavorites);
   const isFavorite = favorites?.some(favorite => favorite.id === car.id);
-  console.log(favorites);
-  console.log(car);
 
   const dispatch = useDispatch();
 
