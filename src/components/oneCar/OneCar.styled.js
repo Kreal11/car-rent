@@ -26,6 +26,10 @@ export const ItemHeaderWrapper = styled.div`
   & div {
     display: flex;
   }
+
+  span {
+    color: #3470ff;
+  }
 `;
 
 export const ItemDescrList = styled.ul`
@@ -81,4 +85,15 @@ export const ItemButton = styled.button`
   border-radius: 12px;
   background: #3470ff;
   margin: 0 auto;
+`;
+
+export const ImgWrapper = styled.div`
+  position: relative;
+`;
+
+export const ChooseCarButton = styled.button`
+  background-color: transparent;
+  position: absolute;
+  top: 4%;
+  left: 89%;
 `;
