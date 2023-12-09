@@ -3,8 +3,8 @@ import {
   CatalogItem,
   ImgWrapper,
   ItemButton,
-  ItemDescrList,
   ItemHeaderWrapper,
+  ItemTagsList,
 } from '../oneCar/OneCar.styled';
 import { useModal } from '../../hooks/useModal';
 import { Modal } from '../modal/Modal';
@@ -31,7 +31,7 @@ export const FavoriteCar = ({ favoriteCar }) => {
           </div>
           <h5>{favoriteCar.rentalPrice}</h5>
         </ItemHeaderWrapper>
-        <ItemDescrList>
+        <ItemTagsList>
           <li>{city}</li>
           <li>{country}</li>
           <li>{favoriteCar.rentalCompany}</li>
@@ -39,7 +39,7 @@ export const FavoriteCar = ({ favoriteCar }) => {
           <li>{favoriteCar.model}</li>
           <li>{favoriteCar.id}</li>
           <li>{favoriteCar.accessories[0]}</li>
-        </ItemDescrList>
+        </ItemTagsList>
       </div>
       <ItemButton type="button" onClick={openModal}>
         Learn more

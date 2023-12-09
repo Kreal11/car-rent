@@ -32,7 +32,7 @@ export const ItemHeaderWrapper = styled.div`
   }
 `;
 
-export const ItemDescrList = styled.ul`
+export const ItemTagsList = styled.ul`
   display: flex;
   justify-content: flex-start;
   align-items: center;

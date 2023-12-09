@@ -4,8 +4,8 @@ import {
   ChooseCarButton,
   ImgWrapper,
   ItemButton,
-  ItemDescrList,
   ItemHeaderWrapper,
+  ItemTagsList,
 } from './OneCar.styled';
 import { useModal } from '../../hooks/useModal';
 import { Modal } from '../modal/Modal';
@@ -63,14 +63,14 @@ export const OneCar = ({ car }) => {
           </div>
           <h5>{car.rentalPrice}</h5>
         </ItemHeaderWrapper>
-        <ItemDescrList>
+        <ItemTagsList>
           <li>{city}</li>
           <li>{country}</li>
           <li>{car.rentalCompany}</li>
           <li>{car.type}</li>
           <li>{car.model}</li>
-          <li>ID: {car.id}</li>
-        </ItemDescrList>
+          <li>id: {car.id}</li>
+        </ItemTagsList>
       </div>
       <ItemButton type="button" onClick={openModal}>
         Learn more

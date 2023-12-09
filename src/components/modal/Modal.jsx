@@ -1,5 +1,15 @@
 import React, { useEffect } from 'react';
-import { ModalWrapper, WrapperOverlay } from './Modal.styled';
+import {
+  CloseModalButton,
+  ItemDescrModalP,
+  ItemHeaderModalWrapper,
+  ItemTagsModalList,
+  ModalWrapper,
+  RentCarButton,
+  WrapperOverlay,
+} from './Modal.styled';
+import { AccessorAndFunct } from '../accessorAndFunct/AccessorAndFunct';
+import { SvgSymbols } from '../../images/svg/SvgSymbols';
 
 export const Modal = ({ car, city, country, closeModal }) => {
   useEffect(() => {
@@ -28,28 +38,30 @@ export const Modal = ({ car, city, country, closeModal }) => {
       <ModalWrapper>
         <img src={car.img} alt="Car" crossOrigin="anonymous" />
         <div>
-          <div>
-            <div>
-              <h2>
-                {car.make} <span>{car.model}</span>, {car.year}
-              </h2>
-            </div>
-            <h5>{car.rentalPrice}</h5>
-          </div>
-          <ul>
+          <ItemHeaderModalWrapper>
+            <h2>
+              {car.make} <span>{car.model}</span>, {car.year}
+            </h2>
+          </ItemHeaderModalWrapper>
+          <ItemTagsModalList>
             <li>{city}</li>
             <li>{country}</li>
-            <li>{car.rentalCompany}</li>
-            <li>{car.type}</li>
-            <li>{car.model}</li>
-            <li>{car.id}</li>
-            <li>{car.accessories[0]}</li>
-          </ul>
+            <li>id: {car.id}</li>
+            <li>Year: {car.year}</li>
+            <li>Type: {car.type}</li>
+            <li>Fuel Consumption: {car.fuelConsumption}</li>
+            <li>Engine Size: {car.engineSize}</li>
+          </ItemTagsModalList>
+          <ItemDescrModalP>{car.description}</ItemDescrModalP>
+          <AccessorAndFunct car={car} />
         </div>
-        <button type="button" onClick={closeModal}>
-          X
-        </button>
-        <button type="button">Rental car</button>
+        <SvgSymbols />
+        <CloseModalButton type="button" onClick={closeModal}>
+          <svg height={24}>
+            <use href="#icon-x" width={24} height={24} />
+          </svg>
+        </CloseModalButton>
+        <RentCarButton type="button">Rental car</RentCarButton>
       </ModalWrapper>
     </WrapperOverlay>
   );
