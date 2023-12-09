@@ -5,12 +5,12 @@ export const AccessorAndFunct = ({ car }) => {
   return (
     <>
       <AccAndFunctHeader>Accessories and functionalities:</AccAndFunctHeader>
-      <AccAndFunctList>
+      <AccAndFunctList data="accessories">
         {car.accessories.map((accessory, index) => (
           <li key={index}>{accessory}</li>
         ))}
       </AccAndFunctList>
-      <AccAndFunctList>
+      <AccAndFunctList data="functionalities">
         {car.functionalities.map((functionality, index) => (
           <li key={index}>{functionality}</li>
         ))}
