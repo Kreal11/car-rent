@@ -33,7 +33,14 @@ export const Catalog = () => {
     const filters = {
       make: data.carBrand?.label || '',
       rentalPrice: rentalPrice?.value || '',
-      mileage: mileageRange || '',
+      mileage: {
+        min: mileageRange.from
+          ? parseInt(mileageRange.from.replace(/,/g, ''), 10)
+          : null,
+        max: mileageRange.to
+          ? parseInt(mileageRange.to.replace(/,/g, ''), 10)
+          : null,
+      },
     };
     console.log(filters);
 

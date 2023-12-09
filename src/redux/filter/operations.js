@@ -8,15 +8,17 @@ export const filterCarsThunk = createAsyncThunk(
     try {
       const { data } = await instance.get('adverts');
 
-      //   console.log(filters);
-      //   console.log(data);
       const filteredData = data.filter(car => {
         const makeMatch = !filters.make || car.make === filters.make;
         const priceMatch =
           !filters.rentalPrice ||
           Number(car.rentalPrice.replace(/\D/g, '')) < filters.rentalPrice;
+        const mileageMatch =
+          !filters.mileage ||
+          (car.mileage >= filters.mileage.min &&
+            car.mileage <= filters.mileage.max);
 
-        return makeMatch && priceMatch;
+        return makeMatch && priceMatch && mileageMatch;
       });
 
       if (!filteredData.length) {
