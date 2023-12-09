@@ -61,7 +61,9 @@ export const Modal = ({ car, city, country, closeModal }) => {
             <use href="#icon-x" width={24} height={24} />
           </svg>
         </CloseModalButton>
-        <RentCarButton type="button">Rental car</RentCarButton>
+        <a href="tel:+380730000000">
+          <RentCarButton type="button">Rental car</RentCarButton>
+        </a>
       </ModalWrapper>
     </WrapperOverlay>
   );
