@@ -21,15 +21,3 @@ export const fetchCarsThunk = createAsyncThunk(
     }
   }
 );
-
-export const fetchOneCarThunk = createAsyncThunk(
-  'fetchOneCar',
-  async (id, thunkAPI) => {
-    try {
-      const { data } = await instance.get(`adverts/${id}`);
-      return data;
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
-    }
-  }
-);

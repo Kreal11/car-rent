@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { GlobalStyles } from './styles/GlobalStyles';
 import { store } from './redux/store';
 import { Provider } from 'react-redux';
@@ -15,7 +16,7 @@ root.render(
       {/* <PersistGate loading={null} persistor={persistor}> */}
       <App />
       <GlobalStyles />
-      <ToastContainer autoClose={1000} theme="colored" />
+      <ToastContainer autoClose={4000} theme="colored" />
       {/* </PersistGate> */}
     </Provider>
     {/* </React.StrictMode> */}

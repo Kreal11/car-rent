@@ -1,5 +1,5 @@
 const { createSlice, isAnyOf } = require('@reduxjs/toolkit');
-const { fetchCarsThunk, fetchOneCarThunk } = require('./operations');
+const { fetchCarsThunk } = require('./operations');
 
 const initialState = {
   catalog: [],
@@ -27,28 +27,22 @@ const catalogSlice = createSlice({
         state.isLoading = false;
         state.error = null;
       })
-      .addCase(fetchOneCarThunk.fulfilled, (state, { payload }) => {
-        const chosenCarIndex = state.catalog.findIndex(
-          car => car.id === payload.id
-        );
-        state.catalog[chosenCarIndex] = payload;
-        state.isLoading = false;
+      // .addCase(fetchOneCarThunk.fulfilled, (state, { payload }) => {
+      //   const chosenCarIndex = state.catalog.findIndex(
+      //     car => car.id === payload.id
+      //   );
+      //   state.catalog[chosenCarIndex] = payload;
+      //   state.isLoading = false;
+      //   state.error = null;
+      // })
+      .addMatcher(isAnyOf(fetchCarsThunk.pending), (state, { payload }) => {
+        state.isLoading = true;
         state.error = null;
       })
-      .addMatcher(
-        isAnyOf(fetchCarsThunk.pending, fetchOneCarThunk.pending),
-        (state, { payload }) => {
-          state.isLoading = true;
-          state.error = null;
-        }
-      )
-      .addMatcher(
-        isAnyOf(fetchCarsThunk.rejected, fetchOneCarThunk.rejected),
-        (state, { payload }) => {
-          state.isLoading = false;
-          state.error = payload;
-        }
-      );
+      .addMatcher(isAnyOf(fetchCarsThunk.rejected), (state, { payload }) => {
+        state.isLoading = false;
+        state.error = payload;
+      });
   },
 });
 

@@ -2,26 +2,28 @@ import React, { useState } from 'react';
 
 import { CarMileageSelectWrapper } from './CarMileageSelect.styled';
 
-export const CarMileageInputs = ({ id, label }) => {
+export const CarMileageInputs = ({ id, label, onChange, ...rest }) => {
   const formatNumberWithComma = number => {
     // Функция для форматирования числа с запятой
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   };
 
-  const [mileageFrom, setMileageFrom] = useState('');
-  const [mileageTo, setMileageTo] = useState('');
+  const [mileage, setMileage] = useState({ from: '', to: '' });
 
-  const handleMileageFromChange = e => {
+  const handleMileageChange = (e, type) => {
     // Обработчик изменения значения для первого инпута
     const value = e.target.value.replace(/\D/g, ''); // Удаляем не-цифры
-    setMileageFrom(formatNumberWithComma(value));
+    const formattedValue = formatNumberWithComma(value);
+    setMileage(prev => ({ ...prev, [type]: formattedValue }));
+    onChange({ ...mileage, [type]: formattedValue });
   };
 
-  const handleMileageToChange = e => {
-    // Обработчик изменения значения для второго инпута
-    const value = e.target.value.replace(/\D/g, ''); // Удаляем не-цифры
-    setMileageTo(formatNumberWithComma(value));
-  };
+  // const handleMileageToChange = e => {
+
+  //   const value = e.target.value.replace(/\D/g, '');
+  //   const formattedValue = formatNumberWithComma(value);
+  //   onChange({ from: rest.from, to: formattedValue });
+  // };
 
   return (
     <CarMileageSelectWrapper>
@@ -31,9 +33,10 @@ export const CarMileageInputs = ({ id, label }) => {
           <input
             type="text"
             id="carMileage"
-            value={mileageFrom}
-            onChange={handleMileageFromChange}
+            value={rest.from}
+            onChange={e => handleMileageChange(e, 'from')}
             data-from="From"
+            {...rest}
           />
           <p>From</p>
         </div>
@@ -41,9 +44,10 @@ export const CarMileageInputs = ({ id, label }) => {
           <input
             type="text"
             id="carMileage"
-            value={mileageTo}
-            onChange={handleMileageToChange}
+            value={rest.to}
+            onChange={e => handleMileageChange(e, 'to')}
             data-to="To"
+            {...rest}
           />
           <p>To</p>
         </div>

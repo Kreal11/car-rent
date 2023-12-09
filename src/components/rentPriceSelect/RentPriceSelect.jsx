@@ -4,7 +4,7 @@ import { RentPriceSelectWrapper } from './RentPriceSelect.styled';
 import { customRentPriceSelect } from '../../helpers/customRentPriceSelect';
 import Select from 'react-select';
 
-export const RentPriceSelect = ({ id, label }) => {
+export const RentPriceSelect = ({ id, label, ...rest }) => {
   const rentPrices = useRentPrices();
 
   const options = rentPrices.map(({ value, label }) => ({ value, label }));
@@ -38,6 +38,7 @@ export const RentPriceSelect = ({ id, label }) => {
         isSearchable
         isClearable
         styles={customStyles}
+        {...rest}
       />
       {/* <select>
         <option value="" disabled selected>

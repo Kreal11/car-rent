@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { forwardRef, useState } from 'react';
 import { useCarBrands } from '../../hooks/useCarBrands';
 import { CarBrandSelectWrapper } from './CarBrandSelect.styled';
 import Select from 'react-select';
 import { customBrandSelect } from '../../helpers/customBrandSelect';
 
-export const CarBrandSelect = ({ id, label }) => {
+export const CarBrandSelect = forwardRef(({ id, label, ...rest }, ref) => {
   const carBrands = useCarBrands();
 
   const options = carBrands.map(({ value, label }) => ({ value, label }));
@@ -31,6 +31,7 @@ export const CarBrandSelect = ({ id, label }) => {
     <CarBrandSelectWrapper>
       <label htmlFor={id}>{label}</label>
       <Select
+        ref={ref}
         options={options}
         placeholder="Enter the text"
         isSearchable
@@ -38,6 +39,7 @@ export const CarBrandSelect = ({ id, label }) => {
         onMenuOpen={handleMenuOpen}
         onMenuClose={handleMenuClose}
         styles={customStyles}
+        {...rest}
       />
       {/* <select name="" id={id}>
         <option value="" disabled selected>
@@ -53,4 +55,4 @@ export const CarBrandSelect = ({ id, label }) => {
       </select> */}
     </CarBrandSelectWrapper>
   );
-};
+});
