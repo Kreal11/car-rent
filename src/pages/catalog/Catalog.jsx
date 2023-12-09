@@ -3,7 +3,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectCatalog, selectIsLoading } from '../../redux/catalog/selectors';
 import { OneCar } from '../../components/oneCar/OneCar';
 import { fetchCarsThunk } from '../../redux/catalog/operations';
-import { CatalogList, CatalogWrapper } from './Catalog.styled';
+import {
+  CatalogList,
+  CatalogWrapper,
+  SearchForm,
+  SearchInputContainer,
+} from './Catalog.styled';
+import { CarBrandSelect } from '../../components/carBrandSelect/CarBrandSelect';
+import { RentPriceSelect } from '../../components/rentPriceSelect/RentPriceSelect';
 
 export const Catalog = () => {
   const catalog = useSelector(selectCatalog);
@@ -23,12 +30,23 @@ export const Catalog = () => {
 
   return (
     <CatalogWrapper>
-      <form action="">
-        <input type="text" />
-        <input type="text" />
-        <input type="text" />
+      <SearchForm action="">
+        {/* <SearchInputContainer> */}
+        <CarBrandSelect id="carBrand" label="Car brand" />
+        {/* </SearchInputContainer> */}
+        {/* <SearchInputContainer> */}
+        <RentPriceSelect id="rentPrice" label="Price/ 1 hour" />
+        {/* </SearchInputContainer> */}
+        <SearchInputContainer>
+          <label htmlFor="carMileage">Car mileage / km</label>
+          <div>
+            <input type="text" id="carMileage" />
+            <input type="text" id="carMileage" />
+          </div>
+        </SearchInputContainer>
+
         <button>Search</button>
-      </form>
+      </SearchForm>
 
       <CatalogList>
         {catalog?.map(car => {
