@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useCarBrands } from '../../hooks/useCarBrands';
 import { CarBrandSelectWrapper } from './CarBrandSelect.styled';
 import Select from 'react-select';
@@ -9,6 +9,24 @@ export const CarBrandSelect = ({ id, label }) => {
 
   const options = carBrands.map(({ value, label }) => ({ value, label }));
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleMenuOpen = () => {
+    setIsMenuOpen(true);
+  };
+
+  const handleMenuClose = () => {
+    setIsMenuOpen(false);
+  };
+
+  const customStyles = {
+    ...customBrandSelect,
+    dropdownIndicator: (provided, state) => ({
+      ...provided,
+      transform: isMenuOpen ? 'rotate(180deg)' : 'none',
+    }),
+  };
+
   return (
     <CarBrandSelectWrapper>
       <label htmlFor={id}>{label}</label>
@@ -17,7 +35,9 @@ export const CarBrandSelect = ({ id, label }) => {
         placeholder="Enter the text"
         isSearchable
         isClearable
-        styles={customBrandSelect}
+        onMenuOpen={handleMenuOpen}
+        onMenuClose={handleMenuClose}
+        styles={customStyles}
       />
       {/* <select name="" id={id}>
         <option value="" disabled selected>

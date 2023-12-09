@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useRentPrices } from '../../hooks/useRentPrices';
 import { RentPriceSelectWrapper } from './RentPriceSelect.styled';
 import { customRentPriceSelect } from '../../helpers/customRentPriceSelect';
@@ -9,15 +9,35 @@ export const RentPriceSelect = ({ id, label }) => {
 
   const options = rentPrices.map(({ value, label }) => ({ value, label }));
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleMenuOpen = () => {
+    setIsMenuOpen(true);
+  };
+
+  const handleMenuClose = () => {
+    setIsMenuOpen(false);
+  };
+
+  const customStyles = {
+    ...customRentPriceSelect,
+    dropdownIndicator: (provided, state) => ({
+      ...provided,
+      transform: isMenuOpen ? 'rotate(180deg)' : 'none',
+    }),
+  };
+
   return (
     <RentPriceSelectWrapper>
       <label htmlFor={id}>{label}</label>
       <Select
         options={options}
         placeholder="To $"
+        onMenuOpen={handleMenuOpen}
+        onMenuClose={handleMenuClose}
         isSearchable
         isClearable
-        styles={customRentPriceSelect}
+        styles={customStyles}
       />
       {/* <select>
         <option value="" disabled selected>

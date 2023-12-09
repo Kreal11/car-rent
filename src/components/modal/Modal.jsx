@@ -10,7 +10,6 @@ import {
 } from './Modal.styled';
 import { AccessorAndFunct } from '../accessorAndFunct/AccessorAndFunct';
 import { SvgSymbols } from '../../images/svg/SvgSymbols';
-import { toast } from 'react-toastify';
 
 export const Modal = ({ car, city, country, closeModal }) => {
   const [isClicked, setIsClicked] = useState(false);
