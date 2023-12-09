@@ -27,20 +27,26 @@ export const CarMileageInputs = ({ id, label }) => {
     <CarMileageSelectWrapper>
       <label htmlFor={id}>{label}</label>
       <div>
-        <input
-          type="text"
-          id="carMileage"
-          placeholder="From"
-          value={mileageFrom}
-          onChange={handleMileageFromChange}
-        />
-        <input
-          type="text"
-          id="carMileage"
-          placeholder="To"
-          value={mileageTo}
-          onChange={handleMileageToChange}
-        />
+        <div>
+          <input
+            type="text"
+            id="carMileage"
+            value={mileageFrom}
+            onChange={handleMileageFromChange}
+            data-from="From"
+          />
+          <p>From</p>
+        </div>
+        <div>
+          <input
+            type="text"
+            id="carMileage"
+            value={mileageTo}
+            onChange={handleMileageToChange}
+            data-to="To"
+          />
+          <p>To</p>
+        </div>
       </div>
       {/* <select name="" id={id}>
         <option value="" disabled selected>

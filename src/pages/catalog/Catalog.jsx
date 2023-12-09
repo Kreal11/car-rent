@@ -3,7 +3,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectCatalog, selectIsLoading } from '../../redux/catalog/selectors';
 import { OneCar } from '../../components/oneCar/OneCar';
 import { fetchCarsThunk } from '../../redux/catalog/operations';
-import { CatalogList, CatalogWrapper, SearchForm } from './Catalog.styled';
+import {
+  CatalogList,
+  CatalogWrapper,
+  LoadMoreButton,
+  SearchButton,
+  SearchForm,
+} from './Catalog.styled';
 import { CarBrandSelect } from '../../components/carBrandSelect/CarBrandSelect';
 import { RentPriceSelect } from '../../components/rentPriceSelect/RentPriceSelect';
 import { CarMileageInputs } from '../../components/carMileageSelect/CarMileageSelect';
@@ -37,7 +43,7 @@ export const Catalog = () => {
         <CarMileageInputs id="carMileage" label="Car mileage" />
         {/* </SearchInputContainer> */}
 
-        <button>Search</button>
+        <SearchButton>Search</SearchButton>
       </SearchForm>
 
       <CatalogList>
@@ -46,9 +52,13 @@ export const Catalog = () => {
         })}
       </CatalogList>
       {page < 3 && (
-        <button type="button" onClick={handleLoadMore} disabled={isLoading}>
+        <LoadMoreButton
+          type="button"
+          onClick={handleLoadMore}
+          disabled={isLoading}
+        >
           Load more
-        </button>
+        </LoadMoreButton>
       )}
     </CatalogWrapper>
   );

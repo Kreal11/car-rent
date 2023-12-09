@@ -85,6 +85,10 @@ export const ItemButton = styled.button`
   border-radius: 12px;
   background: #3470ff;
   margin: 0 auto;
+
+  &:active {
+    background-color: #0b44cd;
+  }
 `;
 
 export const ImgWrapper = styled.div`

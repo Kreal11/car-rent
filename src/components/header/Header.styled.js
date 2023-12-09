@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
 export const NavLinkWrapper = styled.div`
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 600;
   display: flex;
   justify-content: center;
   gap: 30px;
   margin-top: 20px;
+  margin-bottom: 20px;
 
   a {
     padding: 5px;
