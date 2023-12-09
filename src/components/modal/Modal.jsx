@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   CloseModalButton,
   ItemDescrModalP,
@@ -10,8 +10,11 @@ import {
 } from './Modal.styled';
 import { AccessorAndFunct } from '../accessorAndFunct/AccessorAndFunct';
 import { SvgSymbols } from '../../images/svg/SvgSymbols';
+import { toast } from 'react-toastify';
 
 export const Modal = ({ car, city, country, closeModal }) => {
+  const [isClicked, setIsClicked] = useState(false);
+
   useEffect(() => {
     const handleKeyDown = e => {
       if (e.key === 'Escape') {
@@ -31,6 +34,10 @@ export const Modal = ({ car, city, country, closeModal }) => {
     if (target === currentTarget) {
       closeModal();
     }
+  };
+
+  const handleCallForRent = () => {
+    setIsClicked(true);
   };
 
   return (
@@ -62,7 +69,9 @@ export const Modal = ({ car, city, country, closeModal }) => {
           </svg>
         </CloseModalButton>
         <a href="tel:+380730000000">
-          <RentCarButton type="button">Rental car</RentCarButton>
+          <RentCarButton type="button" onClick={handleCallForRent}>
+            {isClicked ? '+380730000000' : 'Rental car'}
+          </RentCarButton>
         </a>
       </ModalWrapper>
     </WrapperOverlay>
