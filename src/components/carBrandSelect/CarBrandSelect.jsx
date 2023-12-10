@@ -32,6 +32,7 @@ export const CarBrandSelect = forwardRef(({ id, label, ...rest }, ref) => {
     <CarBrandSelectWrapper>
       <label htmlFor={id}>{label}</label>
       <Select
+        id="brandSelect12"
         ref={ref}
         options={options}
         placeholder="Enter the text"

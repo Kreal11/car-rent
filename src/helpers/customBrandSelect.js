@@ -29,6 +29,7 @@ export const customBrandSelect = {
   }),
   menu: (provided, state) => ({
     ...provided,
+    color: 'rgba(18, 20, 23, 0.20)',
     display: 'inline',
     height: 'auto',
     padding: '14px 8px 14px 18px',
@@ -40,17 +41,23 @@ export const customBrandSelect = {
     border: '1px solid rgba(18, 20, 23, 0.05)',
     background: '#FFF',
     boxShadow: '0px 4px 36px 0px rgba(0, 0, 0, 0.02)',
-    overflowY: 'auto',
-    scrollbarWidth: 'thin',
-    scrollbarColor: '#121417 rgba(18, 20, 23, 0.05)',
+    '&:hover, &:focus': {
+      color: '#121417',
+    },
+    transition: 'color 0.4s ease',
+  }),
+  menuList: base => ({
+    ...base,
 
     '&::-webkit-scrollbar': {
       width: '8px',
     },
-
     '&::-webkit-scrollbar-thumb': {
       borderRadius: '10px',
       background: 'rgba(18, 20, 23, 0.05)',
+    },
+    '& .css-13w9d7g-menu:hover, & .css-13w9d7g-menu:focus': {
+      color: 'black',
     },
   }),
 };
