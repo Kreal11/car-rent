@@ -1,11 +1,11 @@
 export const customRentPriceSelect = {
   control: (provided, state) => ({
     ...provided,
-    width: '150px',
+    width: '165px',
     height: '48px',
     flexWrap: 'nowrap',
     display: 'flex',
-    padding: '14px 0px 14px 10px',
+    padding: '14px 0px 14px 4px',
     justifyContent: 'space-bewtween',
     alignItems: 'center',
     border: 'none',

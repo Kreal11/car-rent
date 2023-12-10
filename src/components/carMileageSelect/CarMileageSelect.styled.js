@@ -29,6 +29,7 @@ export const CarMileageSelectWrapper = styled.div`
         font-size: 18px;
         font-weight: 500;
         line-height: normal;
+        outline: none;
 
         &[data-from='From'] {
           padding: 14px 0px 14px 75px;
