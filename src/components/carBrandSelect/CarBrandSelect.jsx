@@ -24,6 +24,7 @@ export const CarBrandSelect = forwardRef(({ id, label, ...rest }, ref) => {
     dropdownIndicator: (provided, state) => ({
       ...provided,
       transform: isMenuOpen ? 'rotate(180deg)' : 'none',
+      transition: 'transform 0.3s ease',
     }),
   };
 
