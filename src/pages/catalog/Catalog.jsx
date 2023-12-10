@@ -36,12 +36,21 @@ export const Catalog = () => {
       mileage: {
         min: mileageRange.from
           ? parseInt(mileageRange.from.replace(/,/g, ''), 10)
-          : null,
+          : '',
         max: mileageRange.to
           ? parseInt(mileageRange.to.replace(/,/g, ''), 10)
-          : null,
+          : '',
       },
     };
+
+    if (filters.mileage.min === '' && filters.mileage.max === '') {
+      filters.mileage = '';
+    }
+
+    // if (filters.mileage.min && filters.mileage.max === '') {
+    //   filters.mileage = filters.mileage.min;
+    // }
+
     console.log(filters);
 
     dispatch(filterCarsThunk(filters));

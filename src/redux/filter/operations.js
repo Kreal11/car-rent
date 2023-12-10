@@ -13,8 +13,16 @@ export const filterCarsThunk = createAsyncThunk(
         const priceMatch =
           !filters.rentalPrice ||
           Number(car.rentalPrice.replace(/\D/g, '')) < filters.rentalPrice;
+        if (!filters.mileage.min && filters.mileage.max) {
+          return makeMatch && priceMatch && car.mileage <= filters.mileage.max;
+        }
+        if (!filters.mileage.max && filters.mileage.min) {
+          const mileageMatchFrom = car.mileage >= filters.mileage.min;
+          return makeMatch && priceMatch && mileageMatchFrom;
+        }
+
         const mileageMatch =
-          !filters.mileage ||
+          filters.mileage === '' ||
           (car.mileage >= filters.mileage.min &&
             car.mileage <= filters.mileage.max);
 
