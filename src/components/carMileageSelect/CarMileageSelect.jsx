@@ -18,13 +18,6 @@ export const CarMileageInputs = ({ id, label, onChange, ...rest }) => {
     onChange({ ...mileage, [type]: formattedValue });
   };
 
-  // const handleMileageToChange = e => {
-
-  //   const value = e.target.value.replace(/\D/g, '');
-  //   const formattedValue = formatNumberWithComma(value);
-  //   onChange({ from: rest.from, to: formattedValue });
-  // };
-
   return (
     <CarMileageSelectWrapper>
       <label htmlFor={id}>{label}</label>
@@ -33,7 +26,7 @@ export const CarMileageInputs = ({ id, label, onChange, ...rest }) => {
           <input
             type="text"
             id="carMileage"
-            value={rest.from}
+            value={mileage.from}
             onChange={e => handleMileageChange(e, 'from')}
             data-from="From"
             {...rest}
@@ -44,7 +37,7 @@ export const CarMileageInputs = ({ id, label, onChange, ...rest }) => {
           <input
             type="text"
             id="carMileage"
-            value={rest.to}
+            value={mileage.to}
             onChange={e => handleMileageChange(e, 'to')}
             data-to="To"
             {...rest}
@@ -52,18 +45,6 @@ export const CarMileageInputs = ({ id, label, onChange, ...rest }) => {
           <p>To</p>
         </div>
       </div>
-      {/* <select name="" id={id}>
-        <option value="" disabled selected>
-          Enter the text
-        </option>
-        {carBrands?.map(brand => {
-          return (
-            <option key={brand} value={brand}>
-              {brand}
-            </option>
-          );
-        })}
-      </select> */}
     </CarMileageSelectWrapper>
   );
 };
