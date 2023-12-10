@@ -47,10 +47,6 @@ export const Catalog = () => {
       filters.mileage = '';
     }
 
-    // if (filters.mileage.min && filters.mileage.max === '') {
-    //   filters.mileage = filters.mileage.min;
-    // }
-
     console.log(filters);
 
     dispatch(filterCarsThunk(filters));
