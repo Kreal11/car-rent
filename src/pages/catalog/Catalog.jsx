@@ -95,7 +95,7 @@ export const Catalog = () => {
             return <OneCar key={car.id} car={car} />;
           })}
       </CatalogList>
-      {page < 3 && (
+      {page < 3 && !filter.length && (
         <LoadMoreButton
           type="button"
           onClick={handleLoadMore}

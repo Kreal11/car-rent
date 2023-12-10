@@ -10,6 +10,7 @@ import {
 } from './Modal.styled';
 import { AccessorAndFunct } from '../accessorAndFunct/AccessorAndFunct';
 import { SvgSymbols } from '../../images/svg/SvgSymbols';
+import { RentalConditions } from '../rentalConditions/RentalConditions';
 
 export const Modal = ({ car, city, country, closeModal }) => {
   const [isClicked, setIsClicked] = useState(false);
@@ -60,6 +61,7 @@ export const Modal = ({ car, city, country, closeModal }) => {
           </ItemTagsModalList>
           <ItemDescrModalP>{car.description}</ItemDescrModalP>
           <AccessorAndFunct car={car} />
+          <RentalConditions car={car} />
         </div>
         <SvgSymbols />
         <CloseModalButton type="button" onClick={closeModal}>

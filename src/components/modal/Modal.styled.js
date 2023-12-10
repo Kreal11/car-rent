@@ -26,8 +26,8 @@ export const ModalWrapper = styled.div`
   border-radius: 24px;
 
   img {
-    width: 469px;
-    height: 314px;
+    width: 100%;
+    height: 247px;
     border-radius: 14px;
     object-fit: cover;
     margin-bottom: 14px;
@@ -91,6 +91,7 @@ export const ItemTagsModalList = styled.ul`
 `;
 
 export const ItemDescrModalP = styled.p`
+  width: 100%;
   color: #121417;
   font-size: 14px;
   font-weight: 400;

@@ -10,11 +10,21 @@ export const Favorites = () => {
   return (
     <CatalogWrapper>
       <CatalogList>
-        {favorites?.map(favoriteCar => {
-          return (
-            <FavoriteCar key={crypto.randomUUID()} favoriteCar={favoriteCar} />
-          );
-        })}
+        {favorites.length ? (
+          favorites?.map(favoriteCar => {
+            return (
+              <FavoriteCar
+                key={crypto.randomUUID()}
+                favoriteCar={favoriteCar}
+              />
+            );
+          })
+        ) : (
+          <h3>
+            There are no favorites cars yet😭 Tap on the "heart" symbol to add
+            favorites cars to list!
+          </h3>
+        )}
       </CatalogList>
     </CatalogWrapper>
   );

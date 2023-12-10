@@ -17,6 +17,7 @@ export const AccAndFunctList = styled.ul`
   font-weight: 400;
   line-height: 1.5;
   width: 100%;
+  margin-bottom: 24px;
 
   &[data='accessories'] {
     margin-bottom: 4px;
