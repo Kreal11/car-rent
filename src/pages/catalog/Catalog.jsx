@@ -29,6 +29,10 @@ export const Catalog = () => {
   const { handleSubmit, setValue } = useForm();
   const dispatch = useDispatch();
 
+  useEffect(() => {
+    dispatch(fetchCarsThunk({ page: page, limit: 12 }));
+  }, [dispatch, page]);
+
   const submit = data => {
     const filters = {
       make: data.carBrand?.label || '',
@@ -51,10 +55,6 @@ export const Catalog = () => {
 
     dispatch(filterCarsThunk(filters));
   };
-
-  useEffect(() => {
-    dispatch(fetchCarsThunk({ page: page, limit: 12 }));
-  }, [dispatch, page]);
 
   const handleLoadMore = () => {
     setPage(prevPage => prevPage + 1);
@@ -88,13 +88,11 @@ export const Catalog = () => {
           ? filter?.map(filteredCar => {
               return <OneCar key={filteredCar.id} car={filteredCar} />;
             })
-          : null}
-        {catalog.length <= 32 &&
-          !filter.length &&
-          catalog?.map(car => {
-            return <OneCar key={car.id} car={car} />;
-          })}
+          : catalog?.map(car => {
+              return <OneCar key={car.id} car={car} />;
+            })}
       </CatalogList>
+
       {page < 3 && !filter.length && (
         <LoadMoreButton
           type="button"
