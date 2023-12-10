@@ -63,30 +63,22 @@ export const Catalog = () => {
   return (
     <CatalogWrapper>
       <SearchForm action="" onSubmit={handleSubmit(submit)}>
-        {/* <SearchInputContainer> */}
         <CarBrandSelect
           id="carBrand"
           label="Car brand"
-          // {...register('carBrand')}
           onChange={selectedOption => setValue('carBrand', selectedOption)}
           ref={carBrandSelectRef}
         />
-        {/* </SearchInputContainer> */}
-        {/* <SearchInputContainer> */}
         <RentPriceSelect
           id="rentPrice"
           label="Price/ 1 hour"
           onChange={selectedOption => setRentalPrice(selectedOption)}
         />
-        {/* </SearchInputContainer> */}
-        {/* <SearchInputContainer> */}
         <CarMileageInputs
           id="carMileage"
           label="Car mileage"
           onChange={mileage => setMileageRange(mileage)}
-          // {...register('carMileage')}
         />
-        {/* </SearchInputContainer> */}
 
         <SearchButton type="submit">Search</SearchButton>
       </SearchForm>

@@ -33,6 +33,10 @@ export const filterCarsThunk = createAsyncThunk(
         toast.warning(
           'It seems that no such machines were found for your request😭 Try to apply other search parameters!'
         );
+      } else {
+        filteredData.length === 1
+          ? toast.success(`${filteredData.length} car was found!`)
+          : toast.success(`${filteredData.length} cars were found!`);
       }
 
       return filteredData;

@@ -47,7 +47,7 @@ export const CarMileageSelectWrapper = styled.div`
       p {
         position: absolute;
         left: 24px;
-        top: 14px;
+        top: 13px;
         color: #8a8a89;
         font-size: 18px;
         font-weight: 500;

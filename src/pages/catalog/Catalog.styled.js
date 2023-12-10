@@ -21,16 +21,6 @@ export const SearchForm = styled.form`
   gap: 18px;
 `;
 
-export const SearchInputContainer = styled.div`
-  /* display: flex;
-  flex-direction: column;
-  gap: 8px;
-
-  input#carBrand {
-    width: 224px;
-  } */
-`;
-
 export const SearchButton = styled.button`
   max-width: 136px;
   max-height: 48px;
