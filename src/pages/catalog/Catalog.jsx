@@ -89,7 +89,7 @@ export const Catalog = () => {
               return <OneCar key={filteredCar.id} car={filteredCar} />;
             })
           : null}
-        {catalog.length <= 25 &&
+        {catalog.length <= 32 &&
           !filter.length &&
           catalog?.map(car => {
             return <OneCar key={car.id} car={car} />;
