@@ -23,18 +23,16 @@ const catalogSlice = createSlice({
   extraReducers: builder => {
     builder
       .addCase(fetchCarsThunk.fulfilled, (state, { payload }) => {
-        state.catalog = [...state.catalog, ...payload];
+        console.log(payload);
+        const newCars = payload.filter(
+          newCar =>
+            !state.catalog.some(existingCar => existingCar.id === newCar.id)
+        );
+
+        state.catalog = [...state.catalog, ...newCars];
         state.isLoading = false;
         state.error = null;
       })
-      // .addCase(fetchOneCarThunk.fulfilled, (state, { payload }) => {
-      //   const chosenCarIndex = state.catalog.findIndex(
-      //     car => car.id === payload.id
-      //   );
-      //   state.catalog[chosenCarIndex] = payload;
-      //   state.isLoading = false;
-      //   state.error = null;
-      // })
       .addMatcher(isAnyOf(fetchCarsThunk.pending), (state, { payload }) => {
         state.isLoading = true;
         state.error = null;

@@ -11,13 +11,8 @@ export const Favorites = () => {
     <CatalogWrapper>
       <CatalogList>
         {favorites.length ? (
-          favorites?.map(favoriteCar => {
-            return (
-              <FavoriteCar
-                key={crypto.randomUUID()}
-                favoriteCar={favoriteCar}
-              />
-            );
+          favorites?.map((favoriteCar, index) => {
+            return <FavoriteCar key={index} favoriteCar={favoriteCar} />;
           })
         ) : (
           <h3>
