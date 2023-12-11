@@ -12,11 +12,6 @@ const filterSlice = createSlice({
   initialState,
   extraReducers: builder => {
     builder.addCase(filterCarsThunk.fulfilled, (state, { payload }) => {
-      console.log(payload);
-      //   if (state.filter.length) {
-      //     state.filter = [];
-      //   }
-
       state.filter = [];
       state.filter = payload;
       state.isLoading = false;

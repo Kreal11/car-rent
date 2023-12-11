@@ -23,7 +23,6 @@ const catalogSlice = createSlice({
   extraReducers: builder => {
     builder
       .addCase(fetchCarsThunk.fulfilled, (state, { payload }) => {
-        console.log(payload);
         const newCars = payload.filter(
           newCar =>
             !state.catalog.some(existingCar => existingCar.id === newCar.id)

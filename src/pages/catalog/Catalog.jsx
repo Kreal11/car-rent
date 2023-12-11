@@ -52,7 +52,6 @@ export const Catalog = () => {
       filters.mileage = '';
     }
 
-    console.log(filters);
     if (Object.values(filters).some(value => value !== '')) {
       dispatch(filterCarsThunk(filters));
     } else {
@@ -64,9 +63,9 @@ export const Catalog = () => {
     setPage(prevPage => prevPage + 1);
   };
 
-  const handleResetParameters = () => {
-    window.location.reload();
-  };
+  // const handleResetParameters = () => {
+  //   window.location.reload();
+  // };
 
   return (
     <CatalogWrapper>
@@ -91,11 +90,11 @@ export const Catalog = () => {
         <SearchButton type="submit">Search</SearchButton>
       </SearchForm>
 
-      {filter?.length ? (
+      {/* {filter?.length ? (
         <button type="button" onClick={handleResetParameters}>
           Reset search parameters
         </button>
-      ) : null}
+      ) : null} */}
 
       <CatalogList>
         {filter.length

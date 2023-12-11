@@ -24,8 +24,7 @@ export const Home = () => {
         <img src={carImage} alt="" />
       </CarWrapper>
       <TextHeader>
-        Welcome to <span>FastWheels Rent</span>!
-        <h2>Check our advantages below!</h2>
+        Welcome to <span>FastWheels Rent</span>! Check our advantages below!
       </TextHeader>
 
       <OfferHeader>We offer: </OfferHeader>
