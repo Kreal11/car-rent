@@ -24,11 +24,26 @@ export const ItemHeaderWrapper = styled.div`
 
   & div {
     display: flex;
+    gap: 8px;
   }
 
   span {
     color: #3470ff;
   }
+`;
+
+export const CuttedBrandWrapper = styled.div`
+  max-width: 90px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`;
+
+export const SpannedWrapper = styled.div`
+  max-width: 70px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 export const ItemTagsList = styled.ul`
