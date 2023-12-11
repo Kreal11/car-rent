@@ -1,72 +1,31 @@
-# Getting Started with Create React App
+<h1 align="center"> 👨‍💻 Test task Project 👩‍💻 </h1>
+<h2 align="center">   FastWheels Rent   </h2>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<span align="center">
 
-## Available Scripts
+![HTML](https://img.shields.io/badge/-HTML-05122A?style=flat&logo=HTML5)&nbsp;
+![CSS](https://img.shields.io/badge/-CSS-05122A?style=flat&logo=CSS3&logoColor=2965f1)&nbsp;
+![JavaScript](https://img.shields.io/badge/-JavaScript-05122A?style=flat&logo=javascript)&nbsp;
 
-In the project directory, you can run:
+![Git](https://img.shields.io/badge/-Git-05122A?style=flat&logo=git)&nbsp;
+![GitHub](https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github)&nbsp;
+![Figma](https://img.shields.io/badge/-Figma-05122A?style=flat&logo=figma)&nbsp;
 
-### `npm start`
+Welcome to the repository for the Car Rental online platform, dedicated to serving car rental needs in Ukraine.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Key Features:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+🔘 Home: A concise introduction to our car rental services.
 
-### `npm test`
+🔘 Catalog: Explore our extensive car catalog with the ability to apply filters based on brand, maximum rental price, and mileage. Detailed information on each car, including specifications and costs, is available. Users can conveniently add cars to their favorites directly from this page for future consideration and booking.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🔘 Favorites: View a curated collection of cars that you've added to your favorites. Filter options allow you to organize cars by make, mileage, and rental cost on this dedicated page.
 
-### `npm run build`
+🔘 Filtering: Use our user-friendly filter system to quickly find cars based on brand, rental price, and mileage. This streamlines the process of discovering the perfect car that aligns with your specific requirements.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+🔘 Add to Favorites: Save cars of interest to your favorites for thoughtful decision-making and easy ordering at a later time.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🔘 Phone Orders: Contact us seamlessly through our website to place orders over the phone. Our team is readily available to assist and provide guidance whenever needed.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-хелло 12
+Dependencies:
+▫️ HTML ▫️ CSS ▫️ JavaScript ▫️ React/Redux Toolkit ▫️ React Router Dom ▫️ React Select ▫️ Styled Components ▫️ Axios ▫️ React Toastify
