@@ -70,3 +70,22 @@ export const LoaderWrapper = styled.div`
   display: flex;
   justify-content: center;
 `;
+
+export const ResetSearchButton = styled.button`
+  max-width: 180px;
+  max-height: 48px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.42;
+  display: flex;
+  padding: 14px 44px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background-color: #8b0000;
+
+  &:active {
+    background-color: #800000;
+  }
+`;

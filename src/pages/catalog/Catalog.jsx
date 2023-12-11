@@ -8,6 +8,7 @@ import {
   CatalogWrapper,
   LoadMoreButton,
   LoaderWrapper,
+  ResetSearchButton,
   SearchButton,
   SearchForm,
 } from './Catalog.styled';
@@ -70,9 +71,9 @@ export const Catalog = () => {
     setPage(prevPage => prevPage + 1);
   };
 
-  // const handleResetParameters = () => {
-  //   window.location.reload();
-  // };
+  const handleResetParameters = () => {
+    window.location.reload();
+  };
 
   return (
     <CatalogWrapper>
@@ -95,13 +96,13 @@ export const Catalog = () => {
         />
 
         <SearchButton type="submit">Search</SearchButton>
+        {filter?.length ? (
+          <ResetSearchButton type="button" onClick={handleResetParameters}>
+            Reset search
+          </ResetSearchButton>
+        ) : null}
       </SearchForm>
 
-      {/* {filter?.length ? (
-        <button type="button" onClick={handleResetParameters}>
-          Reset search parameters
-        </button>
-      ) : null} */}
       {(isLoading || isFiltering) && (
         <LoaderWrapper>
           <ClipLoader color="#3470ff" />
