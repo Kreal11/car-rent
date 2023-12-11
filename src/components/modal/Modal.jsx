@@ -1,3 +1,4 @@
+import ReactDOM from 'react-dom';
 import React, { useEffect, useState } from 'react';
 import {
   CloseModalButton,
@@ -11,6 +12,8 @@ import {
 import { AccessorAndFunct } from '../accessorAndFunct/AccessorAndFunct';
 import { SvgSymbols } from '../../images/svg/SvgSymbols';
 import { RentalConditions } from '../rentalConditions/RentalConditions';
+
+const rootModal = document.querySelector('#modal');
 
 export const Modal = ({ car, city, country, closeModal }) => {
   const [isClicked, setIsClicked] = useState(false);
@@ -40,7 +43,7 @@ export const Modal = ({ car, city, country, closeModal }) => {
     setIsClicked(true);
   };
 
-  return (
+  return ReactDOM.createPortal(
     <WrapperOverlay onClick={handleClickOut}>
       <ModalWrapper>
         <img src={car.img} alt="Car" crossOrigin="anonymous" />
@@ -75,6 +78,7 @@ export const Modal = ({ car, city, country, closeModal }) => {
           </RentCarButton>
         </a>
       </ModalWrapper>
-    </WrapperOverlay>
+    </WrapperOverlay>,
+    rootModal
   );
 };

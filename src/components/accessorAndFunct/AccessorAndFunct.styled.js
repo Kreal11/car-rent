@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 export const AccAndFunctHeader = styled.h3`
-  color: #121417 !important;
-  font-size: 14px !important;
-  font-weight: 500 !important;
-  line-height: 1.42 !important;
-  margin-bottom: 8px !important;
-  text-align: start !important;
-  max-width: none !important;
+  color: #121417;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.42;
+  margin-bottom: 8px;
+  text-align: start;
+  max-width: none;
 `;
 
 export const AccAndFunctList = styled.ul`
