@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/test-task-car-rent/static/css/main.1aa1b982.css",
-    "main.js": "/test-task-car-rent/static/js/main.9b64dd5d.js",
+    "main.js": "/test-task-car-rent/static/js/main.be95199e.js",
     "static/media/bg-image-car.jpg": "/test-task-car-rent/static/media/bg-image-car.bf513c7549a46c95e785.jpg",
     "static/media/chevrolet-img.png": "/test-task-car-rent/static/media/chevrolet-img.ad9bce1db8a22d0bb488.png",
     "static/media/hyundai-img.png": "/test-task-car-rent/static/media/hyundai-img.3e9f7547bd543ec01169.png",
@@ -22,10 +22,10 @@
     "static/media/mitsubishi-img.png": "/test-task-car-rent/static/media/mitsubishi-img.dec7703c84b03eb88987.png",
     "index.html": "/test-task-car-rent/index.html",
     "main.1aa1b982.css.map": "/test-task-car-rent/static/css/main.1aa1b982.css.map",
-    "main.9b64dd5d.js.map": "/test-task-car-rent/static/js/main.9b64dd5d.js.map"
+    "main.be95199e.js.map": "/test-task-car-rent/static/js/main.be95199e.js.map"
   },
   "entrypoints": [
     "static/css/main.1aa1b982.css",
-    "static/js/main.9b64dd5d.js"
+    "static/js/main.be95199e.js"
   ]
 }
