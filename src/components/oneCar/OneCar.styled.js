@@ -9,7 +9,6 @@ export const CatalogItem = styled.li`
     height: 268px;
     border-radius: 14px;
     object-fit: cover;
-    /* clip-path: polygon(0% 0%, 100% 0%, 100% 98%, 0% 98%); */
     margin-bottom: 14px;
   }
 `;
@@ -39,7 +38,6 @@ export const ItemTagsList = styled.ul`
   column-gap: 12px;
   row-gap: 4px;
   flex-wrap: wrap;
-  /* flex-wrap: wrap; */
   margin-bottom: 28px;
   max-height: 40px;
   text-overflow: ellipsis;
@@ -51,9 +49,6 @@ export const ItemTagsList = styled.ul`
     font-size: 12px;
     line-height: 1.5;
     position: relative;
-    /* white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis; */
 
     &::after {
       content: '';

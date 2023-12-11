@@ -153,8 +153,6 @@ export const CarBrandsList = styled.ul`
   display: grid;
   grid-template-columns: repeat(5, 100px);
   grid-template-rows: repeat(auto-fit, 100px);
-  /* column-gap: 120px; */
-  /* row-gap: 5px; */
   justify-content: space-between;
   padding: 0px 30px 20px 30px;
 
