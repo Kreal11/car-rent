@@ -1,20 +1,31 @@
 {
   "files": {
     "main.css": "/test-task-car-rent/static/css/main.1aa1b982.css",
-    "main.js": "/test-task-car-rent/static/js/main.32b8acdb.js",
+    "main.js": "/test-task-car-rent/static/js/main.65184866.js",
+    "static/media/bg-image-car.jpg": "/test-task-car-rent/static/media/bg-image-car.bf513c7549a46c95e785.jpg",
+    "static/media/chevrolet-img.png": "/test-task-car-rent/static/media/chevrolet-img.ad9bce1db8a22d0bb488.png",
+    "static/media/hyundai-img.png": "/test-task-car-rent/static/media/hyundai-img.3e9f7547bd543ec01169.png",
+    "static/media/subaru-img.png": "/test-task-car-rent/static/media/subaru-img.5aa89b6468244f946c42.png",
+    "static/media/land-img.png": "/test-task-car-rent/static/media/land-img.548c3517e25ff2172f8a.png",
+    "static/media/lambo-img.png": "/test-task-car-rent/static/media/lambo-img.2ec8f75669903c751788.png",
     "static/media/Inter-Medium.ttf": "/test-task-car-rent/static/media/Inter-Medium.3f7acfe50aad7ad68548.ttf",
     "static/media/Сar.png": "/test-task-car-rent/static/media/Сar.8cc66dfe699b50b16085.png",
+    "static/media/mercedes-img.png": "/test-task-car-rent/static/media/mercedes-img.a692476ab712986563db.png",
+    "static/media/porsche-img.png": "/test-task-car-rent/static/media/porsche-img.a4b7af6dd71ea2dd7edf.png",
     "static/media/Montserrat-SemiBold.ttf": "/test-task-car-rent/static/media/Montserrat-SemiBold.93b37a465fc4ec0d0415.ttf",
     "static/media/Montserrat-Regular.ttf": "/test-task-car-rent/static/media/Montserrat-Regular.24785cc015b27a3e964b.ttf",
+    "static/media/mini-img.png": "/test-task-car-rent/static/media/mini-img.d6db2721ddffbf766413.png",
+    "static/media/audi-img.png": "/test-task-car-rent/static/media/audi-img.5d860cc7f9044180ef22.png",
     "static/media/Manrope-SemiBold.ttf": "/test-task-car-rent/static/media/Manrope-SemiBold.310f108cc524df0e5ffc.ttf",
     "static/media/Manrope-Medium.ttf": "/test-task-car-rent/static/media/Manrope-Medium.08894ccb04665d1a9d53.ttf",
     "static/media/Manrope-Regular.ttf": "/test-task-car-rent/static/media/Manrope-Regular.a9b9e09fe6b69741f316.ttf",
+    "static/media/mitsubishi-img.png": "/test-task-car-rent/static/media/mitsubishi-img.dec7703c84b03eb88987.png",
     "index.html": "/test-task-car-rent/index.html",
     "main.1aa1b982.css.map": "/test-task-car-rent/static/css/main.1aa1b982.css.map",
-    "main.32b8acdb.js.map": "/test-task-car-rent/static/js/main.32b8acdb.js.map"
+    "main.65184866.js.map": "/test-task-car-rent/static/js/main.65184866.js.map"
   },
   "entrypoints": [
     "static/css/main.1aa1b982.css",
-    "static/js/main.32b8acdb.js"
+    "static/js/main.65184866.js"
   ]
 }
