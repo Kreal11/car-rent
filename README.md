@@ -9,7 +9,6 @@
 ![Git](https://img.shields.io/badge/-Git-05122A?style=flat&logo=git)&nbsp;
 ![GitHub](https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github)&nbsp;
 ![Figma](https://img.shields.io/badge/-Figma-05122A?style=flat&logo=figma)&nbsp;
-</span>
 
 Welcome to the repository for the Car Rental online platform, dedicated to serving car rental needs in Ukraine.
 
