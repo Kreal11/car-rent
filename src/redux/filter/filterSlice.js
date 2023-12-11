@@ -16,6 +16,7 @@ const filterSlice = createSlice({
       //   if (state.filter.length) {
       //     state.filter = [];
       //   }
+
       state.filter = [];
       state.filter = payload;
       state.isLoading = false;

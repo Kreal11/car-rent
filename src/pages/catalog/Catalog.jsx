@@ -16,6 +16,7 @@ import { CarMileageInputs } from '../../components/carMileageSelect/CarMileageSe
 import { useForm } from 'react-hook-form';
 import { selectFilterCars } from '../../redux/filter/selectors';
 import { filterCarsThunk } from '../../redux/filter/operations';
+import { toast } from 'react-toastify';
 
 export const Catalog = () => {
   const catalog = useSelector(selectCatalog);
@@ -52,12 +53,33 @@ export const Catalog = () => {
     }
 
     console.log(filters);
-
-    dispatch(filterCarsThunk(filters));
+    if (Object.values(filters).some(value => value !== '')) {
+      dispatch(filterCarsThunk(filters));
+    } else {
+      toast.info('Fill in at least one field!');
+    }
   };
 
   const handleLoadMore = () => {
     setPage(prevPage => prevPage + 1);
+  };
+
+  // const handleResetFilters = () => {
+  //   setPage(1);
+
+  // Reset the filter state
+  //   dispatch(filterCarsThunk({}))
+  //     .then(() => {
+  // After resetting the filter, fetch the first 12 cars
+  //       dispatch(fetchCarsThunk({ page: 1, limit: 12 }));
+  //     })
+  //     .catch(error => {
+  //       console.error('Filter reset error:', error);
+  //     });
+  // };
+
+  const handleResetParameters = () => {
+    window.location.reload();
   };
 
   return (
@@ -82,6 +104,12 @@ export const Catalog = () => {
 
         <SearchButton type="submit">Search</SearchButton>
       </SearchForm>
+
+      {filter?.length ? (
+        <button type="button" onClick={handleResetParameters}>
+          Reset search parameters
+        </button>
+      ) : null}
 
       <CatalogList>
         {filter.length

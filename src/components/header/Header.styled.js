@@ -6,8 +6,11 @@ export const NavLinkWrapper = styled.div`
   display: flex;
   justify-content: center;
   gap: 70px;
-  margin-top: 20px;
-  margin-bottom: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid lightgrey;
+  background-color: #e0ecf4;
 
   a {
     padding: 5px;
