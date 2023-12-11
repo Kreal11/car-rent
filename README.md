@@ -1,14 +1,15 @@
 <h1 align="center"> 👨‍💻 Test task Project 👩‍💻 </h1>
 <h2 align="center">   FastWheels Rent   </h2>
 
-<span align="center">
-![HTML](https://img.shields.io/badge/-HTML-05122A?style=flat&logo=HTML5)&nbsp;
-![CSS](https://img.shields.io/badge/-CSS-05122A?style=flat&logo=CSS3&logoColor=2965f1)&nbsp;
-![JavaScript](https://img.shields.io/badge/-JavaScript-05122A?style=flat&logo=javascript)&nbsp;
+<p align="center">
+  <img src="https://img.shields.io/badge/-HTML-05122A?style=flat&logo=HTML5" alt="HTML">&nbsp;
+  <img src="https://img.shields.io/badge/-CSS-05122A?style=flat&logo=CSS3&logoColor=2965f1" alt="CSS">&nbsp;
+  <img src="https://img.shields.io/badge/-JavaScript-05122A?style=flat&logo=javascript" alt="JavaScript">&nbsp;
 
-![Git](https://img.shields.io/badge/-Git-05122A?style=flat&logo=git)&nbsp;
-![GitHub](https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github)&nbsp;
-![Figma](https://img.shields.io/badge/-Figma-05122A?style=flat&logo=figma)&nbsp;
+  <img src="https://img.shields.io/badge/-Git-05122A?style=flat&logo=git" alt="Git">&nbsp;
+  <img src="https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github" alt="GitHub">&nbsp;
+  <img src="https://img.shields.io/badge/-Figma-05122A?style=flat&logo=figma" alt="Figma">&nbsp;
+</p>
 
 Welcome to the repository for the Car Rental online platform, dedicated to serving car rental needs in Ukraine.
 
