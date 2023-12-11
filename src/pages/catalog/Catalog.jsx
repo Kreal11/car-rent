@@ -64,20 +64,6 @@ export const Catalog = () => {
     setPage(prevPage => prevPage + 1);
   };
 
-  // const handleResetFilters = () => {
-  //   setPage(1);
-
-  // Reset the filter state
-  //   dispatch(filterCarsThunk({}))
-  //     .then(() => {
-  // After resetting the filter, fetch the first 12 cars
-  //       dispatch(fetchCarsThunk({ page: 1, limit: 12 }));
-  //     })
-  //     .catch(error => {
-  //       console.error('Filter reset error:', error);
-  //     });
-  // };
-
   const handleResetParameters = () => {
     window.location.reload();
   };

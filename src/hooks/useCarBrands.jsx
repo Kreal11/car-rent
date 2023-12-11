@@ -28,7 +28,7 @@ export const useCarBrands = () => {
         { value: 'tesla', label: 'Tesla' },
         { value: 'porsche', label: 'Porsche' },
         { value: 'jaguar', label: 'Jaguar' },
-        { value: 'lexus', label: 'Land' },
+        { value: 'lexus', label: 'Lexus' },
       ].sort((a, b) => a.label.localeCompare(b.label)),
     []
   );

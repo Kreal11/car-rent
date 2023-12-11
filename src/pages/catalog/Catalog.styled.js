@@ -8,6 +8,13 @@ export const CatalogList = styled.ul`
   column-gap: 29px;
   margin-top: 50px;
   margin-bottom: 100px;
+
+  h3 {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 400px;
+    font-size: 24px;
+  }
 `;
 
 export const CatalogWrapper = styled.div`
