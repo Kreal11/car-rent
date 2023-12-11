@@ -39,7 +39,11 @@ export const Catalog = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchCarsThunk({ page: page, limit: 12 }));
+    dispatch(fetchCarsThunk({ page: page, limit: 12 }))
+      .unwrap()
+      .catch(e =>
+        toast.error('Oops, something went wrong. Try to reload page')
+      );
   }, [dispatch, page]);
 
   const submit = data => {
@@ -61,7 +65,11 @@ export const Catalog = () => {
     }
 
     if (Object.values(filters).some(value => value !== '')) {
-      dispatch(filterCarsThunk(filters));
+      dispatch(filterCarsThunk(filters))
+        .unwrap()
+        .catch(e =>
+          toast.error('Oops, something went wrong. Try to reload page')
+        );
     } else {
       toast.info('Fill in at least one field!');
     }
