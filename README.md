@@ -11,6 +11,8 @@
   <img src="https://img.shields.io/badge/-Styled_Components-05122A?style=flat&logo=styled-components" alt="Styled Components">&nbsp;
   <img src="https://img.shields.io/badge/-React_Select-05122A?style=flat&logo=react" alt="React Select">&nbsp;
   <img src="https://img.shields.io/badge/-React_Toastify-05122A?style=flat&logo=react" alt="React Toastify">&nbsp;
+  <img src="https://img.shields.io/badge/-React_Toastify-05122A?style=flat&logo=react" alt="React Toastify">&nbsp;
+  <img src="https://img.shields.io/badge/-React_Portals-05122A?style=flat&logo=react" alt="React Portals">&nbsp;
   <img src="https://img.shields.io/badge/-React_Router_Dom-05122A?style=flat&logo=react-router" alt="React Router Dom">&nbsp;
   <img src="https://img.shields.io/badge/-Git-05122A?style=flat&logo=git" alt="Git">&nbsp;
   <img src="https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github" alt="GitHub">&nbsp;
@@ -34,4 +36,4 @@ Key Features:
 🔘 Phone Orders: Contact us seamlessly through our website to place orders over the phone. Our team is readily available to assist and provide guidance whenever needed.
 
 Dependencies:
-▫️ HTML ▫️ CSS ▫️ JavaScript ▫️ React/Redux Toolkit ▫️ React Router Dom ▫️ React Select ▫️ Styled Components ▫️ Axios ▫️ React Toastify
+▫️ HTML ▫️ CSS ▫️ JavaScript ▫️ React/Redux Toolkit ▫️ React Router Dom ▫️ React Select ▫️ React Portals ▫️ Styled Components ▫️ Axios ▫️ React Toastify
