@@ -19,6 +19,7 @@ import { useForm } from 'react-hook-form';
 // import { filterCarsThunk } from '../../redux/filter/operations';
 import { toast } from 'react-toastify';
 import { setFilterFavorites } from '../../redux/favorites/favoritesSlice';
+import { useNavigate } from 'react-router-dom';
 
 export const Favorites = () => {
   const favorites = useSelector(selectFavorites);
@@ -30,6 +31,7 @@ export const Favorites = () => {
 
   const { handleSubmit, setValue } = useForm();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const submit = data => {
     const filters = {
@@ -58,6 +60,7 @@ export const Favorites = () => {
 
   const handleResetParameters = () => {
     window.location.reload();
+    navigate('/favorites');
   };
 
   return (

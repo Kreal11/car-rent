@@ -23,6 +23,7 @@ import {
 import { filterCarsThunk } from '../../redux/filter/operations';
 import { toast } from 'react-toastify';
 import { ClipLoader } from 'react-spinners';
+import { useNavigate } from 'react-router-dom';
 
 export const Catalog = () => {
   const catalog = useSelector(selectCatalog);
@@ -37,6 +38,7 @@ export const Catalog = () => {
   const carBrandSelectRef = useRef();
   const { handleSubmit, setValue } = useForm();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(fetchCarsThunk({ page: page, limit: 12 }))
@@ -81,6 +83,7 @@ export const Catalog = () => {
 
   const handleResetParameters = () => {
     window.location.reload();
+    navigate('/catalog');
   };
 
   return (
