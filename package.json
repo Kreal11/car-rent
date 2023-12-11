@@ -2,7 +2,7 @@
   "name": "test-task-car-rent",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Kreal11.github.io/test-task-car-rent/",
+  "homepage": "https://Kreal11.github.io/test-task-car-rent",
   "dependencies": {
     "@hookform/resolvers": "^3.3.2",
     "@reduxjs/toolkit": "^1.9.7",
