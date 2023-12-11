@@ -2,10 +2,12 @@ import React from 'react';
 import {
   CatalogItem,
   ChooseCarButton,
+  CuttedBrandWrapper,
   ImgWrapper,
   ItemButton,
   ItemHeaderWrapper,
   ItemTagsList,
+  SpannedWrapper,
 } from '../oneCar/OneCar.styled';
 import { useModal } from '../../hooks/useModal';
 import { Modal } from '../modal/Modal';
@@ -65,10 +67,11 @@ export const FavoriteCar = ({ favoriteCar }) => {
       <div>
         <ItemHeaderWrapper>
           <div>
-            <h2>
-              {favoriteCar.make} <span>{favoriteCar.model}</span>,{' '}
-              {favoriteCar.year}
-            </h2>
+            <CuttedBrandWrapper>{favoriteCar.make}</CuttedBrandWrapper>{' '}
+            <SpannedWrapper>
+              <span>{favoriteCar.model},</span>
+            </SpannedWrapper>
+            <div>{favoriteCar.year}</div>
           </div>
           <h5>{favoriteCar.rentalPrice}</h5>
         </ItemHeaderWrapper>
