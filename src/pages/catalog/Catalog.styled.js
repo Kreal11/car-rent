@@ -64,3 +64,9 @@ export const LoadMoreButton = styled.button`
     color: #0b44cd;
   }
 `;
+
+export const LoaderWrapper = styled.div`
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+`;

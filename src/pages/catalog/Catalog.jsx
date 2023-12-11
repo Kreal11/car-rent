@@ -7,6 +7,7 @@ import {
   CatalogList,
   CatalogWrapper,
   LoadMoreButton,
+  LoaderWrapper,
   SearchButton,
   SearchForm,
 } from './Catalog.styled';
@@ -14,14 +15,20 @@ import { CarBrandSelect } from '../../components/carBrandSelect/CarBrandSelect';
 import { RentPriceSelect } from '../../components/rentPriceSelect/RentPriceSelect';
 import { CarMileageInputs } from '../../components/carMileageSelect/CarMileageSelect';
 import { useForm } from 'react-hook-form';
-import { selectFilterCars } from '../../redux/filter/selectors';
+import {
+  selectFilterCars,
+  selectIsFiltering,
+} from '../../redux/filter/selectors';
 import { filterCarsThunk } from '../../redux/filter/operations';
 import { toast } from 'react-toastify';
+import { ClipLoader } from 'react-spinners';
 
 export const Catalog = () => {
   const catalog = useSelector(selectCatalog);
   const filter = useSelector(selectFilterCars);
   const isLoading = useSelector(selectIsLoading);
+  const isFiltering = useSelector(selectIsFiltering);
+
   const [page, setPage] = useState(1);
   const [rentalPrice, setRentalPrice] = useState(null);
   const [mileageRange, setMileageRange] = useState({ min: null, max: null });
@@ -95,7 +102,11 @@ export const Catalog = () => {
           Reset search parameters
         </button>
       ) : null} */}
-
+      {(isLoading || isFiltering) && (
+        <LoaderWrapper>
+          <ClipLoader color="#3470ff" />
+        </LoaderWrapper>
+      )}
       <CatalogList>
         {filter.length
           ? filter?.map(filteredCar => {
@@ -106,7 +117,7 @@ export const Catalog = () => {
             })}
       </CatalogList>
 
-      {page < 3 && !filter.length && (
+      {page < 3 && !filter.length && !isLoading && (
         <LoadMoreButton
           type="button"
           onClick={handleLoadMore}

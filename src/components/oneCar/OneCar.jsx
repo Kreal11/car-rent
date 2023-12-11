@@ -18,6 +18,7 @@ import {
   removeFromFavorites,
 } from '../../redux/favorites/favoritesSlice';
 import { SvgSymbols } from '../../images/svg/SvgSymbols';
+import { toast } from 'react-toastify';
 
 export const OneCar = ({ car }) => {
   const favorites = useSelector(selectFavorites);
@@ -34,8 +35,10 @@ export const OneCar = ({ car }) => {
   const handleFavoriteClick = car => {
     if (isFavorite) {
       dispatch(removeFromFavorites(car));
+      toast.info('Successfully removed from favorites');
     } else {
       dispatch(addToFavorites(car));
+      toast.success('Successfully added to favorites');
     }
   };
 

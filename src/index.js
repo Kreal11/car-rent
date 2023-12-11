@@ -14,7 +14,7 @@ root.render(
     <Provider store={store}>
       <App />
       <GlobalStyles />
-      <ToastContainer autoClose={4000} theme="colored" />
+      <ToastContainer autoClose={3000} theme="light" />
     </Provider>
   </BrowserRouter>
 );
