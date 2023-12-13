@@ -124,4 +124,8 @@ export const RentCarButton = styled.button`
   align-items: center;
   border-radius: 12px;
   background: #3470ff;
+
+  &:active {
+    background-color: #0b44cd;
+  }
 `;
