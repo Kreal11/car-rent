@@ -43,18 +43,6 @@ export const CarBrandSelect = forwardRef(({ id, label, ...rest }, ref) => {
         styles={customStyles}
         {...rest}
       />
-      {/* <select name="" id={id}>
-        <option value="" disabled selected>
-          Enter the text
-        </option>
-        {carBrands?.map(brand => {
-          return (
-            <option key={brand} value={brand}>
-              {brand}
-            </option>
-          );
-        })}
-      </select> */}
     </CarBrandSelectWrapper>
   );
 });

@@ -4,15 +4,13 @@ import { CarMileageSelectWrapper } from './CarMileageSelect.styled';
 
 export const CarMileageInputs = ({ id, label, onChange, ...rest }) => {
   const formatNumberWithComma = number => {
-    // Функция для форматирования числа с запятой
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   };
 
   const [mileage, setMileage] = useState({ from: '', to: '' });
 
   const handleMileageChange = (e, type) => {
-    // Обработчик изменения значения для первого инпута
-    const value = e.target.value.replace(/\D/g, ''); // Удаляем не-цифры
+    const value = e.target.value.replace(/\D/g, '');
     const formattedValue = formatNumberWithComma(value);
     setMileage(prev => ({ ...prev, [type]: formattedValue }));
     onChange({ ...mileage, [type]: formattedValue });
